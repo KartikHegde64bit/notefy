@@ -5,9 +5,15 @@ import NoteCard from './js/NoteCard.js';
 function App() {
   return (
     <div className="App">
-        <NoteCard>
-
-        </NoteCard>
+        <div style={{width: "100%"}}>
+            <div style={{width: "50%", height: "100px", float:"left"}}>
+                Left Section
+            </div>
+            <div style={{width: "50%", height: "100px", float: "right"}}>
+                <NoteCard>
+                </NoteCard>
+            </div>
+        </div>
     </div>
   );
 }

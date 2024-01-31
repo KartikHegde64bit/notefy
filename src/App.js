@@ -6,10 +6,16 @@ function App() {
   return (
     <div className="App">
         <div style={{width: "100%"}}>
+            {/* Left section */} 
             <div style={{width: "50%", height: "100px", float:"left"}}>
                 Left Section
             </div>
-            <div style={{width: "50%", height: "100px", float: "right"}}>
+        
+            {/* Mid section */}
+            <div class="verticalLine"></div>
+
+            {/* Right section */}
+            <div class="rightSectionBase">
                 <NoteCard>
                 </NoteCard>
             </div>

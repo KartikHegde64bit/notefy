@@ -41,13 +41,14 @@
     border-left: 6px solid rgb(158, 228, 222);
     height: 600px;
     margin-top: 1.5%;
-    margin-bottom: 1.5%;
+    margin-bottom: 2.5%;
     position: absolute;
     left: 50%;
 }
 
 .rightSectionBase {
-    width: "50%"; 
-    height: "100px"; 
-    float: "right";
+    width: 50%; 
+    height: 100px; 
+    float: right;
+    margin-top: 100px;
 }

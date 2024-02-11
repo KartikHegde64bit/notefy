@@ -1,6 +1,7 @@
 import { useState } from "react";
 function TextComp(props){
-    let [innerData, setInnerTextData] = useState(props.textData || "Enter your Notes Here");
+    let [innerData, setInnerTextData] = useState(props.textData  || ""),
+        placeholder = props.placeholder? props.placeholder: "Enter your Notes Here";
     const updateInnerTextData = function(event){
         let value = event.target? event.target.value: null;
         if(value || value === ""){
@@ -13,6 +14,7 @@ function TextComp(props){
             id="textInputField" 
             style={{height: "350px", width: "500px", textAlign: "left", resize: 'none'}}
             value={innerData} 
+            placeholder={placeholder}
             onChange={updateInnerTextData}>
         </textarea>
     );

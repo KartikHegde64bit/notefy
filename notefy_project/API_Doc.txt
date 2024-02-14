@@ -1,0 +1,9 @@
+/notes/
+    GET - Get all notes of a user
+    POST - Create a new note for the current user
+
+/notes/<note_id>
+    GET - get the note with the <note_id>
+    PATCH - update the content
+    PUT - update the note
+    DELETE - delete the note

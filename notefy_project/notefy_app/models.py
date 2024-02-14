@@ -2,6 +2,7 @@
 Will contain all the models required for NoteFy App
 """
 from django.db import models
+from django.conf import settings
 from django.contrib.auth.models import (AbstractBaseUser, BaseUserManager, PermissionsMixin)
 
 # Create your models here.
@@ -36,3 +37,15 @@ class User(AbstractBaseUser, PermissionsMixin):
     active_plan = models.CharField(max_length=20, default = "Free")
     objects = UserManager()
     USERNAME_FIELD = 'email'
+
+class Note(models.Model):
+    """Recipe Object"""
+    user = models.ForeignKey(
+        settings.AUTH_USER_MODEL,
+        on_delete = models.CASCADE
+    )
+    title = models.CharField(max_length=255)
+    description = models.TextField(blank=True)
+
+    def __str__(self):
+        return self.title()

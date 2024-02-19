@@ -40,7 +40,8 @@ INSTALLED_APPS = [
     'rest_framework',
     'rest_framework.authtoken',
     'notefy_app',
-    'user'
+    'user',
+    'note'
 ]
 
 MIDDLEWARE = [

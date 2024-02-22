@@ -1,5 +1,5 @@
 import { useState } from "react";
-function TextComp(props){
+function TextComp(props, ref){
     let [innerData, setInnerTextData] = useState(props.textData  || ""),
         placeholder = props.placeholder? props.placeholder: "Enter your Notes Here";
     const updateInnerTextData = function(event){
@@ -8,6 +8,9 @@ function TextComp(props){
             setInnerTextData(value);
         }
     };
+    const returnTextContent = function() {
+        return this.innerData;
+    }
     return(
         <textarea 
             type="text" 

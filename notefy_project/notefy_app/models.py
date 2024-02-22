@@ -42,10 +42,10 @@ class Note(models.Model):
     """Recipe Object"""
     user = models.ForeignKey(
         settings.AUTH_USER_MODEL,
-        on_delete = models.CASCADE
+        on_delete = models.CASCADE,
     )
     title = models.CharField(max_length=255)
     description = models.TextField(blank=True)
 
     def __str__(self):
-        return self.title()
+        return self.title

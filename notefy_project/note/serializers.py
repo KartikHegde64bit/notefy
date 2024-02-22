@@ -8,5 +8,16 @@ class NoteSerializer(serializers.ModelSerializer):
 
     class Meta:
         model  = Note
-        fields = ['id', 'title', 'description']
+        fields = ['id', 'title']
         read_only_fields = ['id']
+    
+    def create(self, validated_data):
+        """Create a Note."""
+        recipe = Note.objects.create(**validated_data)
+        return recipe
+
+class NoteDetailSerializer(NoteSerializer):
+    """Serializer for note detail view"""
+
+    class Meta(NoteSerializer.Meta):
+        fields = NoteSerializer.Meta.fields + ['description']
